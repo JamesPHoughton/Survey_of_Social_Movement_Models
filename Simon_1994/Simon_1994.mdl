@@ -1,0 +1,260 @@
+{UTF-8}
+"Adjusted repression target for doves (D')"=
+	"Baseline repression target for doves (D)" + "Dove responsiveness to resistance (d)"\
+		*"Resistance pursued by opposition against the state (X)"
+	~	
+	~		|
+
+"Adjusted repression target for hawks (H')"=
+	"Baseline repression target for hawks (H)" + "Hawk responsiveness to resistance (h)"\
+		*"Resistance pursued by opposition against the state (X)"
+	~	
+	~	Level of repression where hawkish regime supporters begin to desert the \
+		state
+	|
+
+"Change in Repression (dY/dt)"  = A FUNCTION OF( Delegitimization of repression,Crackdown\
+		) ~~|
+"Change in Repression (dY/dt)"=
+	~	
+	~	Escalation or Deescalation: The cahnge in repression over time
+	|
+
+Delegitimization of repression=
+	"Breakdown Influence (b)" * ("Breakdown Threshold (B)" - "Resistance pursued by opposition against the state (X)"\
+		) * "Repression pursued by state against the opposition (Y)"
+	~	
+	~		|
+
+Direct impact of repression=
+	"Resistance pursued by opposition against the state (X)" * "Impact of repression on opposition (c)"\
+		 * ("Coercion Threshold (C)" - "Repression pursued by state against the opposition (Y)"\
+		)
+	~	
+	~	Not sure why the X scaling...
+	|
+
+Crackdown=
+	"Repression pursued by state against the opposition (Y)" * (("Hawk influence on repression (a)"\
+		*"Adjusted repression target for hawks (H')" -"Repression pursued by state against the opposition (Y)"\
+		) + ("Dove influence on repression (v)"*"Adjusted repression target for doves (D')"\
+		 - "Repression pursued by state against the opposition (Y)"))
+	~	
+	~		|
+
+"Adjusted resistance target (R')"=
+	"Baseline opposition resistance target (R)" + "Resistance response to repression (r)"\
+		*"Repression pursued by state against the opposition (Y)"
+	~	
+	~	Level of resistance where futhrer escalation brings a decline in resources \
+		for the opposition
+	|
+
+Mobilization=
+	"Strength of opposition (p)" * ("Adjusted resistance target (R')" - "Resistance pursued by opposition against the state (X)"\
+		)
+	~	
+	~	Goal seeking Behavior
+		
+		This is yet unfinished with respect to the paper...
+	|
+
+"Change in Resistance (dX/dt)"  = A FUNCTION OF( Mobilization,Direct impact of repression\
+		) ~~|
+"Change in Resistance (dX/dt)"=
+	~	
+	~	Escalation or Deescalation: the change in resistance over time (pg 216)
+	|
+
+"Baseline repression target for doves (D)"=A FUNCTION OF("Baseline repression target for doves (D)"\
+		) ~~|
+"Baseline repression target for doves (D)"=
+	~	
+	~		|
+
+"Baseline repression target for hawks (H)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Breakdown Influence (b)"=A FUNCTION OF("Breakdown Influence (b)") ~~|
+"Breakdown Influence (b)"=
+	~	
+	~	Influence of potential legitimacy crisis and breakdown
+	|
+
+"Breakdown Threshold (B)"=A FUNCTION OF("Breakdown Threshold (B)") ~~|
+"Breakdown Threshold (B)"=
+	~	
+	~	Opposition resistance beyond this risks a legitimacy crisis in the general \
+		population which threatens breakdown.
+	|
+
+"Coercion Threshold (C)"=A FUNCTION OF("Coercion Threshold (C)") ~~|
+"Coercion Threshold (C)"=
+	~	
+	~	State ciercion at this level brings a direct reduction in opposition \
+		resournces (pg 216)
+	|
+
+"Dove influence on repression (v)"=A FUNCTION OF("Dove influence on repression (v)") ~~|
+"Dove influence on repression (v)"=
+	~	
+	~	Relative influence of doves on government repression policy
+	|
+
+"Dove responsiveness to resistance (d)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Hawk influence on repression (a)"=A FUNCTION OF("Hawk influence on repression (a)") ~~|
+"Hawk influence on repression (a)"=
+	~	
+	~	Relative influence of hawks on government repression policy
+	|
+
+"Hawk responsiveness to resistance (h)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Impact of repression on opposition (c)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Baseline opposition resistance target (R)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Repression pursued by state against the opposition (Y)"  = A FUNCTION OF( "Change in Repression (dY/dt)"\
+		)
+	~	
+	~		|
+
+"Resistance pursued by opposition against the state (X)"  = A FUNCTION OF( "Change in Resistance (dX/dt)"\
+		)
+	~	
+	~		|
+
+"Resistance response to repression (r)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Strength of opposition (p)"=A FUNCTION OF("Strength of opposition (p)") ~~|
+"Strength of opposition (p)"=
+	~	[0,1]
+	~	Strength of opposition orgnaization
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,"Resistance pursued by opposition against the state (X)",619,221,50,29,3,131,0,0,0,0,0,0
+10,2,"Repression pursued by state against the opposition (Y)",619,393,46,27,3,131,0,0,0,0,0,0
+12,3,48,619,50,10,8,0,3,0,0,-1,0,0,0
+1,4,6,1,4,0,0,22,0,0,0,-1--1--1,,1|(619,142)|
+1,5,6,3,100,0,0,22,0,0,0,-1--1--1,,1|(619,69)|
+11,6,48,619,86,8,6,33,3,0,0,4,0,0,0
+10,7,"Change in Resistance (dX/dt)",654,86,27,21,40,131,0,0,-1,0,0,0
+12,8,48,619,571,10,8,0,3,0,0,-1,0,0,0
+1,9,11,2,4,0,0,22,0,0,0,-1--1--1,,1|(619,469)|
+1,10,11,8,100,0,0,22,0,0,0,-1--1--1,,1|(619,547)|
+11,11,48,619,525,8,6,33,3,0,0,4,0,0,0
+10,12,"Change in Repression (dY/dt)",656,525,29,23,40,131,0,0,-1,0,0,0
+10,13,"Breakdown Threshold (B)",886,526,36,14,8,3,0,0,0,0,0,0
+10,14,"Coercion Threshold (C)",886,188,59,8,8,131,0,0,0,0,0,0
+10,15,"Adjusted repression target for doves (D')",364,386,52,14,8,3,0,0,0,0,0,0
+10,16,"Baseline repression target for hawks (H)",205,291,52,14,8,3,0,0,0,0,0,0
+10,17,"Baseline repression target for doves (D)",205,389,50,14,8,3,0,0,0,0,0,0
+10,18,"Hawk responsiveness to resistance (h)",205,340,55,14,8,3,0,0,0,0,0,0
+10,19,"Dove responsiveness to resistance (d)",205,442,54,14,8,3,0,0,0,0,0,0
+10,20,"Baseline opposition resistance target (R)",205,193,51,14,8,3,0,0,0,0,0,0
+10,21,"Resistance response to repression (r)",205,242,51,14,8,3,0,0,0,0,0,0
+10,22,"Hawk influence on repression (a)",486,546,48,14,8,3,0,0,0,0,0,0
+10,23,"Dove influence on repression (v)",364,519,47,14,8,3,0,0,0,0,0,0
+10,24,"Breakdown Influence (b)",886,396,34,14,8,3,0,0,0,0,0,0
+10,25,"Impact of repression on opposition (c)",886,96,36,20,8,131,0,0,0,0,0,0
+10,26,"Strength of opposition (p)",364,90,36,14,8,3,0,0,0,0,0,0
+10,27,"Adjusted resistance target (R')",364,236,50,14,8,3,0,0,0,0,0,0
+1,28,2,27,1,0,0,0,0,64,0,-1--1--1,,1|(451,322)|
+1,29,21,27,0,0,0,0,0,64,0,-1--1--1,,1|(278,239)|
+1,30,20,27,0,0,0,0,0,64,0,-1--1--1,,1|(278,212)|
+10,31,Mobilization,443,143,33,8,8,3,0,0,0,0,0,0
+1,32,1,31,1,0,0,0,2,64,0,-1--1--1,|12||0-0-0,1|(486,200)|
+1,33,27,31,1,0,0,0,0,64,0,-1--1--1,,1|(388,173)|
+1,34,31,6,1,0,0,0,2,64,0,-1--1--1,|12||0-0-0,1|(500,94)|
+1,35,26,31,1,0,0,0,0,64,0,-1--1--1,,1|(387,116)|
+10,36,Direct impact of repression,786,143,42,14,8,3,0,0,0,0,0,0
+1,37,1,36,1,0,0,0,2,64,0,-1--1--1,|12||0-0-0,1|(731,198)|
+1,38,2,36,1,0,0,0,2,64,0,-1--1--1,|12||0-0-0,1|(780,257)|
+1,39,14,36,1,0,0,0,0,64,0,-1--1--1,,1|(840,175)|
+1,40,25,36,0,0,0,0,0,64,0,-1--1--1,,1|(838,117)|
+1,41,36,7,1,0,0,0,2,64,0,-1--1--1,|12||0-0-0,1|(757,114)|
+10,42,"Adjusted repression target for hawks (H')",364,311,53,14,8,3,0,0,0,0,0,0
+1,43,16,42,0,0,0,0,0,64,0,-1--1--1,,1|(277,299)|
+1,44,1,42,1,0,0,0,0,64,0,-1--1--1,,1|(427,281)|
+1,45,18,42,0,0,0,0,0,64,0,-1--1--1,,1|(278,326)|
+1,46,17,15,0,0,0,0,0,64,0,-1--1--1,,1|(276,387)|
+1,47,19,15,0,0,0,0,0,64,0,-1--1--1,,1|(277,416)|
+1,48,1,15,1,0,0,0,0,64,0,-1--1--1,,1|(435,320)|
+10,49,Delegitimization of repression,786,458,50,14,8,3,0,0,0,0,0,0
+10,50,Crackdown,443,458,30,8,8,3,0,0,0,0,0,0
+1,51,15,50,1,0,0,0,0,64,0,-1--1--1,,1|(403,431)|
+1,52,42,50,1,0,0,0,0,64,0,-1--1--1,,1|(414,373)|
+1,53,22,50,1,0,0,0,0,64,0,-1--1--1,,1|(452,500)|
+1,54,23,50,1,0,0,0,0,64,0,-1--1--1,,1|(418,487)|
+1,55,50,11,1,0,0,0,0,64,0,-1--1--1,,1|(516,515)|
+1,56,2,50,1,0,0,0,0,64,0,-1--1--1,,1|(546,383)|
+1,57,2,49,1,0,0,0,0,64,0,-1--1--1,,1|(711,388)|
+1,58,1,49,1,0,0,0,0,64,0,-1--1--1,,1|(744,317)|
+1,59,49,12,1,0,0,0,0,64,0,-1--1--1,,1|(735,511)|
+1,60,13,49,0,0,0,0,0,64,0,-1--1--1,,1|(841,495)|
+1,61,24,49,0,0,0,0,0,64,0,-1--1--1,,1|(841,423)|
+12,62,0,220,68,46,12,8,7,0,8,-1,0,0,0,-1--1--1,0-0-0,|18||0-0-0
+Simon 1994
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:Mobilization
+24:0
+25:0
+26:0

@@ -1,0 +1,175 @@
+{UTF-8}
+Opposition Achievements  = A FUNCTION OF( "Government Responsiveness to Opponents of Change (r2)"\
+		,"Opposition to Change (O)")
+	~	
+	~		|
+
+"Success-Driven Mobilization"  = A FUNCTION OF( "Bandwagon Rate due to Successful Action (b)"\
+		,"Supply of Concessions (S)")
+	~	
+	~		|
+
+Mobilization Achievements  = A FUNCTION OF( "Government Responsiveness to Proponents of Change (r1)"\
+		,"Mobilization in Favor of Change (M)")
+	~	
+	~		|
+
+"Mobilization in Favor of Change (M)"  = A FUNCTION OF( Social Mobilization,"Success-Driven Mobilization"\
+		,Suppression of Mobilization,"Size of autonomous movement leadership (a)")
+	~	
+	~		|
+
+Social Mobilization  = A FUNCTION OF( "Contagion Rate due to Successful Mobilization (c)"\
+		,"Mobilization in Favor of Change (M)")
+	~	
+	~		|
+
+Suppression of Mobilization  = A FUNCTION OF( "Deterrent Effect of the Opposition (d)"\
+		,"Opposition to Change (O)")
+	~	
+	~		|
+
+"Supply of Concessions (S)"  = A FUNCTION OF( "Government Initiative (i)",Mobilization Achievements\
+		,Opposition Achievements)
+	~	
+	~		|
+
+"Bandwagon Rate due to Successful Action (b)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Contagion Rate due to Successful Mobilization (c)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Deterrent Effect of the Opposition (d)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Initiative (i)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Responsiveness to Opponents of Change (r2)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Responsiveness to Proponents of Change (r1)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Opposition to Change (O)"  = A FUNCTION OF( "Mobilization in Favor of Change (M)","Opposition's Rate of Countermobilization (p)"\
+		)
+	~	
+	~		|
+
+"Opposition's Rate of Countermobilization (p)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Size of autonomous movement leadership (a)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,"Supply of Concessions (S)",751,206,42,14,8,3,0,0,0,0,0,0
+10,2,"Mobilization in Favor of Change (M)",537,407,56,14,8,3,0,0,0,0,0,0
+10,3,"Opposition to Change (O)",352,208,35,14,8,3,0,0,0,0,0,0
+10,4,"Government Initiative (i)",776,102,32,14,8,3,0,0,0,0,0,0
+10,5,"Government Responsiveness to Proponents of Change (r1)",769,477,68,21,8,3,0,0,0,0,0,0
+10,6,"Government Responsiveness to Opponents of Change (r2)",638,46,67,21,8,3,0,0,0,0,0,0
+10,7,"Opposition's Rate of Countermobilization (p)",333,124,61,14,8,3,0,0,0,0,0,0
+10,8,"Size of autonomous movement leadership (a)",376,509,64,14,8,3,0,0,0,0,0,0
+10,9,"Bandwagon Rate due to Successful Action (b)",518,220,61,14,8,3,0,0,0,0,0,0
+10,10,"Contagion Rate due to Successful Mobilization (c)",731,553,61,21,8,131,0,0,0,0,0,0
+10,11,"Deterrent Effect of the Opposition (d)",316,447,48,14,8,3,0,0,0,0,0,0
+1,12,8,2,1,0,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(430,445)|
+1,13,9,29,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(537,247)|
+1,14,1,29,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(639,223)|
+1,15,10,31,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(633,552)|
+1,16,11,34,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(324,413)|
+1,17,3,34,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(323,308)|
+1,18,2,3,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(472,248)|
+1,19,7,3,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(340,159)|
+1,20,4,1,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(765,147)|
+1,21,5,25,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(768,431)|
+1,22,6,27,0,0,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(582,74)|
+1,23,2,25,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(692,409)|
+1,24,3,27,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(412,146)|
+10,25,Mobilization Achievements,767,379,37,14,8,3,0,0,0,0,0,0
+1,26,25,1,1,0,0,0,0,64,0,-1--1--1,,1|(792,295)|
+10,27,Opposition Achievements,529,103,36,14,8,3,0,0,0,0,0,0
+1,28,27,1,1,0,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(642,119)|
+10,29,"Success-Driven Mobilization",585,271,40,14,8,3,0,0,0,0,0,0
+1,30,29,2,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(552,328)|
+10,31,Social Mobilization,541,563,50,8,8,3,0,0,0,0,0,0
+1,32,2,31,1,0,0,0,0,64,0,-1--1--1,,1|(451,484)|
+1,33,31,2,1,0,0,0,0,64,0,-1--1--1,,1|(625,506)|
+10,34,Suppression of Mobilization,338,367,39,14,8,3,0,0,0,0,0,0
+1,35,34,2,1,0,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(413,394)|
+12,36,0,677,292,23,23,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+R1
+12,37,0,536,476,23,23,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+R2
+12,38,0,681,324,44,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Proof of Efficacy
+12,39,0,535,507,44,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Social Contagion
+12,40,0,550,177,67,14,8,135,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Preserving the Status Quo
+12,41,0,418,304,52,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Pressure to Conform
+12,42,0,543,148,20,20,4,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B1
+12,43,0,411,268,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B2
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:"Supply of Concessions (S)"
+24:0
+25:0
+26:0

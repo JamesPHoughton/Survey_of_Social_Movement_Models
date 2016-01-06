@@ -1,0 +1,208 @@
+{UTF-8}
+Change in Coercive Resources=
+	Coercive Resources P*("Short-term Response to Noncompliance" - Resource Strain)
+	~	
+	~		|
+
+Law Enforcement Response=
+	Sensitivity towards Crime d * Proportion of Citizens Disobeying N
+	~	
+	~		|
+
+Decrease in Noncompliance=
+	Effectiveness of Coercive Apparatus b * Coercive Resources P * Proportion of Citizens Disobeying N
+	~	
+	~		|
+
+Political Support for Coersion  = A FUNCTION OF( Noncompliance Saturation Point M,Proportion of Citizens Disobeying N\
+		)
+	~	
+	~		|
+
+Increase in Noncompliance=
+	Profitability of Breaking Law a * Proportion of Citizens Disobeying N * "Proportion of Citizens who Might Disobey but are Currently Obeying L-N"
+	~	
+	~		|
+
+Resource Sensitivity f  = A FUNCTION OF( )
+	~	
+	~		|
+
+Noncompliance Saturation Point M  = A FUNCTION OF( )
+	~	
+	~		|
+
+Sensitivity towards Crime d  = A FUNCTION OF( )
+	~	
+	~		|
+
+Preemptive Level of Coercive Resources S  = A FUNCTION OF( )
+	~	
+	~		|
+
+Resource Strain=
+	Resource Sensitivity f * (Coercive Resources P - Preemptive Level of Coercive Resources S\
+		)
+	~	
+	~	Slight deviation from the paper to make the signs work properly
+	|
+
+"Short-term Response to Noncompliance"=
+	Law Enforcement Response + Political Support for Coersion
+	~	
+	~		|
+
+Coercive Resources P  = A FUNCTION OF( Change in Coercive Resources)
+	~	
+	~		|
+
+Effectiveness of Coercive Apparatus b  = A FUNCTION OF( )
+	~	
+	~		|
+
+Profitability of Breaking Law a  = A FUNCTION OF( )
+	~	
+	~		|
+
+Proportion of Citizens Disobeying N  = A FUNCTION OF( -Decrease in Noncompliance,Increase in Noncompliance\
+		)
+	~	
+	~		|
+
+"Proportion of Citizens who Might Disobey but are Currently Obeying L-N"  = A FUNCTION OF\
+		( Decrease in Noncompliance,-Increase in Noncompliance)
+	~	
+	~		|
+
+Proportion of Citizens who Might Refuse to Comply L  = A FUNCTION OF( )
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Proportion of Citizens who Might Refuse to Comply L,226,283,57,21,8,3,0,0,0,0,0,0
+10,2,Proportion of Citizens Disobeying N,665,350,51,23,3,131,0,0,0,0,0,0
+10,3,Profitability of Breaking Law a,360,520,41,14,8,3,0,0,0,0,0,0
+10,4,"Proportion of Citizens who Might Disobey but are Currently Obeying L-N",298,353,70,26,3,131,0,0,0,0,0,0
+1,5,7,2,4,0,0,22,0,0,0,-1--1--1,,1|(665,473)|
+1,6,7,4,100,0,0,22,0,0,0,-1--1--1,,1|(298,473)|
+11,7,252,488,473,6,8,34,3,0,0,1,0,0,0
+10,8,Increase in Noncompliance,488,495,41,14,40,3,0,0,-1,0,0,0
+1,9,11,4,4,0,0,22,0,0,0,-1--1--1,,1|(298,218)|
+1,10,11,2,100,0,0,22,0,0,0,-1--1--1,,1|(665,218)|
+11,11,220,477,218,6,8,34,3,0,0,1,0,0,0
+10,12,Decrease in Noncompliance,477,240,41,14,40,3,0,0,-1,0,0,0
+1,13,4,7,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(428,378)|
+1,14,2,7,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(557,371)|
+1,15,3,8,1,0,43,0,2,192,0,-1--1--1,|0||-1--1--1,1|(427,528)|
+12,16,0,594,409,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+R1
+12,17,0,595,439,41,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Social Influence
+12,18,0,379,410,20,20,4,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B1
+12,19,0,379,446,45,14,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Depletion of Law Abiders
+10,20,Effectiveness of Coercive Apparatus b,429,147,55,14,8,3,0,0,0,0,0,0
+10,21,Coercive Resources P,569,143,40,20,3,3,0,0,0,0,0,0
+12,22,48,874,143,10,8,0,3,0,0,-1,0,0,0
+1,23,25,21,4,0,0,22,0,0,0,-1--1--1,,1|(688,140)|
+1,24,25,22,100,0,0,22,0,0,0,-1--1--1,,1|(821,140)|
+11,25,48,773,140,6,8,34,3,0,0,1,0,0,0
+10,26,Change in Coercive Resources,773,164,50,16,40,131,0,0,-1,0,0,0
+1,27,20,11,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(457,178)|
+1,28,21,11,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(505,164)|
+1,29,2,12,1,0,0,0,0,64,0,-1--1--1,,1|(562,314)|
+12,30,0,607,256,20,20,4,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+B2
+12,31,0,605,293,45,14,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|0||255-0-0
+Depletion of Law Breakers
+10,32,Sensitivity towards Crime d,728,299,43,14,8,3,0,0,0,0,0,0
+10,33,Noncompliance Saturation Point M,972,508,48,14,8,3,0,0,0,0,0,0
+1,34,2,37,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(811,391)|
+1,35,32,37,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(787,312)|
+1,36,33,39,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(964,472)|
+10,37,Law Enforcement Response,863,332,46,14,8,3,0,0,0,0,0,0
+1,38,37,47,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(890,273)|
+10,39,Political Support for Coersion,954,424,43,14,8,3,0,0,0,0,0,0
+1,40,2,39,1,0,45,0,2,64,0,-1--1--1,|0||-1--1--1,1|(798,508)|
+1,41,39,47,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(948,293)|
+12,42,0,756,226,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+B3
+12,43,0,759,256,47,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|0||255-0-0
+Enforcing the Law
+12,44,0,837,424,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+R2
+12,45,0,839,460,50,14,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|0||255-0-0
+Curtailment of Enforcement Effort
+10,46,Resource Strain,669,50,40,8,8,3,0,0,0,0,0,0
+10,47,"Short-term Response to Noncompliance",881,214,54,14,8,3,0,0,0,0,0,0
+1,48,47,26,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(860,176)|
+1,49,46,25,1,0,45,0,2,64,0,-1--1--1,|0||-1--1--1,1|(734,61)|
+10,50,Preemptive Level of Coercive Resources S,491,65,56,14,8,3,0,0,0,0,0,0
+10,51,Resource Sensitivity f,844,70,55,8,8,3,0,0,0,0,0,0
+1,52,21,46,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(577,96)|
+1,53,51,46,1,0,43,0,2,192,0,-1--1--1,|0||-1--1--1,1|(765,42)|
+1,54,50,46,1,0,45,0,2,192,0,-1--1--1,|0||-1--1--1,1|(589,39)|
+12,55,0,671,86,20,20,4,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+B4
+12,56,0,671,117,46,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|0||255-0-0
+Resource Pressure
+1,57,21,26,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(662,175)|
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:Profitability of Breaking Law a
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:1
+24:0
+25:0
+26:0

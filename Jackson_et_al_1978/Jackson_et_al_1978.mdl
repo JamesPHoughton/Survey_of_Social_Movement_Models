@@ -1,0 +1,102 @@
+{UTF-8}
+Baseline Coersion c  = A FUNCTION OF( )
+	~	
+	~		|
+
+Baseline Conflict a  = A FUNCTION OF( )
+	~	
+	~		|
+
+Coercive Authoritarianism CA  = A FUNCTION OF( Baseline Coersion c,Intensity of State Reaction to Opposition Action d\
+		,Manifest Conflict MC)
+	~	
+	~		|
+
+Intensity of Opposition Reaction to State Action b  = A FUNCTION OF( )
+	~	
+	~		|
+
+Intensity of State Reaction to Opposition Action d  = A FUNCTION OF( )
+	~	
+	~		|
+
+Manifest Conflict MC  = A FUNCTION OF( Baseline Conflict a,Coercive Authoritarianism CA\
+		,Intensity of Opposition Reaction to State Action b)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Manifest Conflict MC,410,234,37,17,8,131,0,0,0,0,0,0
+10,2,Coercive Authoritarianism CA,410,362,47,19,8,131,0,0,0,0,0,0
+10,3,Baseline Coersion c,410,422,50,8,8,3,0,0,0,0,0,0
+10,4,Baseline Conflict a,410,176,48,8,8,3,0,0,0,0,0,0
+10,5,Intensity of Opposition Reaction to State Action b,556,234,67,14,8,3,0,0,0,0,0,0
+10,6,Intensity of State Reaction to Opposition Action d,262,362,59,21,8,3,0,0,0,0,0,0
+1,7,4,1,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(410,193)|
+1,8,2,1,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(482,290)|
+1,9,5,1,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(475,234)|
+1,10,3,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(410,404)|
+1,11,1,2,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(336,291)|
+1,12,6,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(335,362)|
+12,13,0,410,280,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|0||255-0-0
+R
+12,14,0,410,311,27,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|0||255-0-0
+Escalation
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:Baseline Coersion c
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:1
+24:0
+25:0
+26:0

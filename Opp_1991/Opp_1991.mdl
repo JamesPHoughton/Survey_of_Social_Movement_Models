@@ -1,0 +1,127 @@
+{UTF-8}
+Cost of Repression  = A FUNCTION OF( Percentage of Participants)
+	~	
+	~		|
+
+Costs of Protest  = A FUNCTION OF( Cost of Repression)
+	~	
+	~		|
+
+Kinds of Group Membership=A FUNCTION OF(Kinds of Group Membership) ~~|
+Kinds of Group Membership=
+	~	
+	~	high values refer to membership in groups encouraging protest to a \
+		relatively high extent
+	|
+
+Net Utility of Protest=
+	Preferences for Public Goods * Percieved Influence + Positive Social Incentives + Costs of Protest\
+		 + Protest Norms
+	~	
+	~		|
+
+Percentage of Participants  = A FUNCTION OF( )
+	~	
+	~		|
+
+Percieved Influence  = A FUNCTION OF( Kinds of Group Membership,Percentage of Participants\
+		)
+	~	
+	~		|
+
+Positive Social Incentives  = A FUNCTION OF( Kinds of Group Membership,Percentage of Participants\
+		)
+	~	
+	~		|
+
+Preferences for Public Goods  = A FUNCTION OF( Quality of Public Good Provided by the State\
+		)
+	~	
+	~		|
+
+Protest Norms  = A FUNCTION OF( Kinds of Group Membership,Percentage of Participants)
+	~	
+	~		|
+
+Quality of Public Good Provided by the State  = A FUNCTION OF( Percentage of Participants\
+		)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Net Utility of Protest,428,256,53,8,8,3,0,0,0,0,0,0
+10,2,Preferences for Public Goods,291,159,39,14,8,3,0,0,0,0,0,0
+10,3,Percieved Influence,652,250,50,8,8,3,0,0,0,0,0,0
+10,4,Positive Social Incentives,673,193,39,14,8,3,0,0,0,0,0,0
+10,5,Protest Norms,534,296,37,8,8,3,0,0,0,0,0,0
+10,6,Costs of Protest,408,354,40,8,8,3,0,0,0,0,0,0
+10,7,Cost of Repression,473,448,48,8,8,3,0,0,0,0,0,0
+10,8,Percentage of Participants,710,370,35,14,8,3,0,0,0,0,0,0
+10,9,Kinds of Group Membership,843,255,40,14,8,3,0,0,0,0,0,0
+10,10,Quality of Public Good Provided by the State,611,505,59,14,8,3,0,0,0,0,0,0
+1,11,2,1,0,0,0,0,0,64,0,-1--1--1,,1|(357,205)|
+1,12,3,1,0,0,0,0,0,64,0,-1--1--1,,1|(548,252)|
+1,13,4,1,0,0,0,0,0,64,0,-1--1--1,,1|(553,223)|
+1,14,5,1,0,0,0,0,0,64,0,-1--1--1,,1|(487,278)|
+1,15,6,1,0,0,0,0,0,64,0,-1--1--1,,1|(416,312)|
+1,16,8,7,0,0,0,0,0,64,0,-1--1--1,,1|(592,408)|
+1,17,7,6,0,0,0,0,0,64,0,-1--1--1,,1|(444,406)|
+1,18,8,3,0,0,0,0,0,64,0,-1--1--1,,1|(682,313)|
+1,19,9,3,0,0,0,0,0,64,0,-1--1--1,,1|(759,252)|
+1,20,9,4,1,0,0,0,0,64,0,-1--1--1,,1|(765,214)|
+1,21,8,4,1,0,0,0,0,64,0,-1--1--1,,1|(749,289)|
+1,22,8,5,0,0,0,0,0,64,0,-1--1--1,,1|(621,332)|
+1,23,9,5,1,0,0,0,0,64,0,-1--1--1,,1|(659,301)|
+1,24,8,10,0,0,0,0,0,64,0,-1--1--1,,1|(664,431)|
+1,25,10,2,1,0,0,0,0,64,0,-1--1--1,,1|(186,372)|
+12,26,0,557,69,46,14,8,7,0,8,-1,0,0,0,-1--1--1,0-0-0,|22||0-0-0
+Opp 1991
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:Net Utility of Protest
+24:0
+25:0
+26:0

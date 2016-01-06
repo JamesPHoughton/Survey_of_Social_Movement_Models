@@ -1,0 +1,125 @@
+{UTF-8}
+"Bandwagon Rate due to Successful Action (b)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Contageon Rate due to Successful Mobilization (c)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Deterrent Effect of the Opposition (d)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Initiative (i)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Responsiveness to Opponents of Change (r2)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Government Responsiveness to Proponents of Change (r1)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Mobilization in Favor of Change (M)"  = A FUNCTION OF( "Bandwagon Rate due to Successful Action (b)"\
+		,"Contageon Rate due to Successful Mobilization (c)","Deterrent Effect of the Opposition (d)"\
+		,"Opposition to Change (O)","Size of autonomous movement leadership (a)","Supply of Concessions (S)"\
+		)
+	~	
+	~		|
+
+"Opposition to Change (O)"  = A FUNCTION OF( "Mobilization in Favor of Change (M)","Opposition's Rate of Countermobilization (p)"\
+		)
+	~	
+	~		|
+
+"Opposition's Rate of Countermobilization (p)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Size of autonomous movement leadership (a)"  = A FUNCTION OF( )
+	~	
+	~		|
+
+"Supply of Concessions (S)"  = A FUNCTION OF( "Government Initiative (i)","Government Responsiveness to Opponents of Change (r2)"\
+		,"Government Responsiveness to Proponents of Change (r1)","Mobilization in Favor of Change (M)"\
+		,"Opposition to Change (O)")
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,"Supply of Concessions (S)",809,296,42,14,8,3,0,0,0,0,0,0
+10,2,"Mobilization in Favor of Change (M)",638,461,56,14,8,3,0,0,0,0,0,0
+10,3,"Opposition to Change (O)",467,303,35,14,8,3,0,0,0,0,0,0
+10,4,"Government Initiative (i)",934,326,32,14,8,3,0,0,0,0,0,0
+10,5,"Government Responsiveness to Proponents of Change (r1)",809,188,68,21,8,3,0,0,0,0,0,0
+10,6,"Government Responsiveness to Opponents of Change (r2)",928,238,67,21,8,3,0,0,0,0,0,0
+10,7,"Opposition's Rate of Countermobilization (p)",320,224,61,14,8,3,0,0,0,0,0,0
+10,8,"Size of autonomous movement leadership (a)",523,536,64,14,8,3,0,0,0,0,0,0
+10,9,"Bandwagon Rate due to Successful Action (b)",746,575,61,14,8,3,0,0,0,0,0,0
+10,10,"Contageon Rate due to Successful Mobilization (c)",822,527,72,21,8,131,0,0,0,0,0,0
+10,11,"Deterrent Effect of the Opposition (d)",609,577,48,14,8,3,0,0,0,0,0,0
+1,12,8,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(574,502)|
+1,13,9,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(696,523)|
+1,14,1,2,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(686,341)|
+1,15,10,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(727,492)|
+1,16,11,2,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(621,525)|
+1,17,3,2,1,0,45,0,2,64,0,-1--1--1,|0||-1--1--1,1|(488,433)|
+1,18,2,3,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(585,353)|
+1,19,7,3,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(386,260)|
+1,20,4,1,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(883,314)|
+1,21,5,1,0,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(809,238)|
+1,22,6,1,0,0,45,0,2,64,0,-1--1--1,|0||-1--1--1,1|(867,267)|
+1,23,2,1,1,0,43,0,2,64,0,-1--1--1,|0||-1--1--1,1|(778,419)|
+1,24,3,1,1,0,45,0,2,64,0,-1--1--1,|0||-1--1--1,1|(598,244)|
+///---\\\
+:L<%^E!@
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+5:"Government Responsiveness to Proponents of Change (r1)"
+24:0
+25:0
+26:0

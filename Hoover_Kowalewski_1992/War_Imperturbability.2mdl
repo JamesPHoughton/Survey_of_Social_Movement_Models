@@ -1,0 +1,279 @@
+{UTF-8}
+Accumulation of dissident grievances=
+	0.1*(100-Stock of dissident grievances)
+	~	
+	~	This creates a goal-seeking loop that maximizes the dissident grievances \
+		at 100 on the order of 10 time periods
+	|
+
+Accumulation of dissident resources=
+	(0.3*Stock of dissident grievances/100 + 0.5*Support by third parties for dissidents\
+		/100) * (100 - Stock of dissident resources)
+	~	
+	~	Goal seeking loop to bring dissident resources to 100, with the rate a \
+		weighted average of grievances and third party support.
+	|
+
+Accumulation of regime grievances=
+	(0.1 + 0.2*Regime involvement in war/100)*(100-Stock of regime grievances)
+	~	
+	~	Goal seeking loop to bring greivances to 100. Scaled according to an \
+		exogenous component plus a value according to war involvement.
+	|
+
+Accumulation of regime resources=
+	(0.3 * Stock of regime grievances/100 + 0.3*Regime involvement in war/100)*(100-Stock of Regime Resources\
+		)
+	~	
+	~	Goal seeking loop to bring regime resources to 100, scaled by linear \
+		combination of regime grievances and involvement in war.
+	|
+
+Concessions by regime to dissidents=
+	(0.5*Support by third parties for dissidents/100)*(100-Stock of regime grievances)
+	~	
+	~	proportional to support by third parties and the gap between regime grievances and \
+		potential grievances.
+		Not sure why its not just inversely proportional to regime grievances...
+	|
+
+Depletion of dissident grievances=
+	(0.8 * Concessions by regime to dissidents/100 + 0.1)*Stock of dissident grievances
+	~	
+	~	Constant exogenous depletion (losing relevance?) plus a weighted factor based on \
+		concessions.
+		This is a goal seeking loop driving grievances towards zero.
+		I don't like particularly that the weights don't add to one, as it \
+		conflates the relative influence component with the delay timescale \
+		component.
+	|
+
+Depletion of dissident resources=
+	(0.1*Intensity of dissident activity/100 + 0.3*Intensity of repressive activity/100 \
+		+ 0.2*Scope of dissident activity/100
+	 + 0.4*Scope of repressive activity/100) * Stock of dissident resources
+	~	
+	~	Exponential decay (zero-goal seeking loop) scaled by a weighted sum of all \
+		activity intensity and scope.
+	|
+
+Depletion of regime grievances=
+	0.1*Stock of regime grievances
+	~	
+	~	Insensitive regime, grievances decay only according to exogenous timescale
+	|
+
+Depletion of regime resources=
+	(0.2 * Intensity of repressive activity/100 + 0.1*Intensity of dissident activity/100\
+		 + 0.4*Scope of repressive activity/100 + 0.2*Scope of dissident activity/100)* Stock of Regime Resources
+	~	
+	~	Exponential decay scaled by all activity
+	|
+
+Intensity of dissident activity=
+	0.75*Stock of dissident grievances + 0.25*Stock of dissident resources
+	~	
+	~		|
+
+Intensity of repressive activity=
+	0.75*Stock of regime grievances + 0.25*Stock of Regime Resources
+	~	
+	~		|
+
+Regime involvement in war=
+	100
+	~	
+	~		|
+
+Scope of dissident activity=
+	0.25*Stock of dissident grievances + 0.75*Stock of dissident resources
+	~	
+	~		|
+
+Scope of repressive activity=
+	0.25*Stock of regime grievances + 0.75*Stock of Regime Resources
+	~	
+	~		|
+
+Stock of dissident grievances= INTEG (
+	Accumulation of dissident grievances-Depletion of dissident grievances,
+		100)
+	~	
+	~		|
+
+Stock of dissident resources= INTEG (
+	Accumulation of dissident resources-Depletion of dissident resources,
+		100)
+	~	
+	~		|
+
+Stock of regime grievances= INTEG (
+	Accumulation of regime grievances-Depletion of regime grievances,
+		100)
+	~	
+	~		|
+
+Stock of Regime Resources= INTEG (
+	Accumulation of regime resources-Depletion of regime resources,
+		100)
+	~	
+	~		|
+
+Support by third parties for dissidents=
+	IF THEN ELSE(Intensity of dissident activity < Intensity of repressive activity, (0.5\
+		*(Intensity of repressive activity-Intensity of dissident activity) + 0.25*Scope of dissident activity\
+		 + 0.25*Scope of repressive activity)*(1-Regime involvement in war/200) , (0.25*Scope of dissident activity\
+		 + 0.25*Scope of repressive activity)*(1-Regime involvement in war/200) )
+	~	
+	~	I have no idea.
+	|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 20
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.125
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Stock of dissident grievances,523,133,40,20,3,3,0,0,0,0,0,0
+10,2,Stock of dissident resources,523,275,40,20,3,3,0,0,0,0,0,0
+10,3,Stock of regime grievances,523,417,40,20,3,3,0,0,0,0,0,0
+10,4,Stock of Regime Resources,523,561,40,20,3,3,0,0,0,0,0,0
+12,5,48,328,133,10,8,0,3,0,0,-1,0,0,0
+1,6,8,1,4,0,0,22,0,0,0,-1--1--1,,1|(449,133)|
+1,7,8,5,100,0,0,22,0,0,0,-1--1--1,,1|(371,133)|
+11,8,48,410,133,6,8,34,3,0,0,1,0,0,0
+10,9,Accumulation of dissident grievances,410,155,52,14,40,3,0,0,-1,0,0,0
+12,10,48,711,133,10,8,0,3,0,0,-1,0,0,0
+1,11,13,10,4,0,0,22,0,0,0,-1--1--1,,1|(669,133)|
+1,12,13,1,100,0,0,22,0,0,0,-1--1--1,,1|(594,133)|
+11,13,48,632,133,6,8,34,3,0,0,1,0,0,0
+10,14,Depletion of dissident grievances,632,155,52,14,40,3,0,0,-1,0,0,0
+12,15,48,328,275,10,8,0,3,0,0,-1,0,0,0
+1,16,18,2,4,0,0,22,0,0,0,-1--1--1,,1|(449,275)|
+1,17,18,15,100,0,0,22,0,0,0,-1--1--1,,1|(371,275)|
+11,18,48,410,275,6,8,34,3,0,0,1,0,0,0
+10,19,Accumulation of dissident resources,410,297,48,14,40,3,0,0,-1,0,0,0
+12,20,48,711,275,10,8,0,3,0,0,-1,0,0,0
+1,21,23,20,4,0,0,22,0,0,0,-1--1--1,,1|(669,275)|
+1,22,23,2,100,0,0,22,0,0,0,-1--1--1,,1|(594,275)|
+11,23,48,632,275,6,8,34,3,0,0,1,0,0,0
+10,24,Depletion of dissident resources,632,297,48,14,40,3,0,0,-1,0,0,0
+12,25,48,328,417,10,8,0,3,0,0,-1,0,0,0
+1,26,28,3,4,0,0,22,0,0,0,-1--1--1,,1|(449,417)|
+1,27,28,25,100,0,0,22,0,0,0,-1--1--1,,1|(371,417)|
+11,28,48,410,417,6,8,34,3,0,0,1,0,0,0
+10,29,Accumulation of regime grievances,410,439,47,14,40,3,0,0,-1,0,0,0
+12,30,48,711,417,10,8,0,3,0,0,-1,0,0,0
+1,31,33,30,4,0,0,22,0,0,0,-1--1--1,,1|(669,417)|
+1,32,33,3,100,0,0,22,0,0,0,-1--1--1,,1|(594,417)|
+11,33,48,632,417,6,8,34,3,0,0,1,0,0,0
+10,34,Depletion of regime grievances,632,439,52,14,40,3,0,0,-1,0,0,0
+12,35,48,328,561,10,8,0,3,0,0,-1,0,0,0
+1,36,38,4,4,0,0,22,0,0,0,-1--1--1,,1|(449,561)|
+1,37,38,35,100,0,0,22,0,0,0,-1--1--1,,1|(371,561)|
+11,38,48,410,561,6,8,34,3,0,0,1,0,0,0
+10,39,Accumulation of regime resources,410,583,44,14,40,3,0,0,-1,0,0,0
+12,40,48,711,561,10,8,0,3,0,0,-1,0,0,0
+1,41,43,40,4,0,0,22,0,0,0,-1--1--1,,1|(669,561)|
+1,42,43,4,100,0,0,22,0,0,0,-1--1--1,,1|(594,561)|
+11,43,48,632,561,6,8,34,3,0,0,1,0,0,0
+10,44,Depletion of regime resources,632,583,44,14,40,3,0,0,-1,0,0,0
+10,45,Intensity of dissident activity,794,199,44,14,8,3,0,0,0,0,0,0
+10,46,Scope of dissident activity,262,199,47,14,8,3,0,0,0,0,0,0
+10,47,Concessions by regime to dissidents,794,344,51,14,8,3,0,0,0,0,0,0
+10,48,Support by third parties for dissidents,262,344,53,14,8,3,0,0,0,0,0,0
+10,49,Intensity of repressive activity,794,493,47,14,8,3,0,0,0,0,0,0
+10,50,Scope of repressive activity,262,493,47,14,8,3,0,0,0,0,0,0
+10,51,Regime involvement in war,130,420,50,14,8,3,0,0,0,0,0,0
+1,52,46,48,0,0,0,0,0,64,0,-1--1--1,,1|(262,264)|
+1,53,50,48,0,0,0,0,0,64,0,-1--1--1,,1|(262,425)|
+1,54,1,46,1,0,0,0,0,64,0,-1--1--1,,1|(364,76)|
+1,55,4,50,1,0,0,0,0,64,0,-1--1--1,,1|(360,625)|
+1,56,1,18,1,0,0,0,0,64,0,-1--1--1,,1|(442,202)|
+1,57,2,46,1,0,0,0,0,64,0,-1--1--1,,1|(411,201)|
+1,58,48,19,1,0,0,0,0,64,0,-1--1--1,,1|(339,325)|
+1,59,1,45,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(684,86)|
+1,60,51,39,1,0,0,0,0,64,0,-1--1--1,,1|(179,555)|
+1,61,51,48,0,0,0,0,0,64,0,-1--1--1,,1|(189,385)|
+1,62,47,14,0,0,0,0,0,64,0,-1--1--1,,1|(717,254)|
+1,63,45,23,0,0,0,0,0,64,0,-1--1--1,,1|(707,239)|
+1,64,45,48,1,0,0,0,0,64,0,-1--1--1,,1|(601,367)|
+1,65,48,47,0,0,0,0,0,64,0,-1--1--1,,1|(522,344)|
+1,66,49,43,0,0,0,0,0,64,0,-1--1--1,,1|(705,529)|
+1,67,49,48,1,0,0,0,0,64,0,-1--1--1,,1|(505,489)|
+1,68,3,38,1,0,0,0,0,64,0,-1--1--1,,1|(479,493)|
+1,69,3,33,1,0,0,0,0,64,0,-1--1--1,,1|(590,396)|
+1,70,4,43,1,0,0,0,0,64,0,-1--1--1,,1|(591,538)|
+1,71,1,13,1,0,0,0,0,64,0,-1--1--1,,1|(591,111)|
+1,72,1,8,1,0,0,0,0,64,0,-1--1--1,,1|(448,106)|
+1,73,3,47,0,0,0,0,0,64,0,-1--1--1,,1|(646,383)|
+1,74,49,24,0,0,0,0,0,64,0,-1--1--1,,1|(717,400)|
+1,75,3,49,0,0,0,0,0,64,0,-1--1--1,,1|(648,451)|
+1,76,46,24,1,0,0,0,0,64,0,-1--1--1,,1|(462,216)|
+1,77,46,44,0,0,0,0,0,64,0,-1--1--1,,1|(441,385)|
+1,78,51,29,0,0,0,0,0,64,0,-1--1--1,,1|(264,428)|
+1,79,2,18,1,0,0,0,0,64,0,-1--1--1,,1|(451,256)|
+1,80,3,28,1,0,0,0,0,64,0,-1--1--1,,1|(446,402)|
+1,81,4,38,1,0,0,0,0,64,0,-1--1--1,,1|(474,542)|
+1,82,50,24,0,0,0,0,0,64,0,-1--1--1,,1|(440,398)|
+1,83,2,23,1,0,0,0,0,64,0,-1--1--1,,1|(595,247)|
+1,84,45,43,1,0,0,0,0,64,0,-1--1--1,,1|(725,313)|
+1,85,50,43,1,0,0,0,0,64,0,-1--1--1,,1|(466,492)|
+1,86,2,45,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(649,239)|
+1,87,4,49,0,0,0,0,0,64,0,-1--1--1,,1|(648,529)|
+1,88,4,50,0,0,0,0,0,64,0,-1--1--1,,1|(402,529)|
+1,89,3,50,0,0,0,0,0,64,0,-1--1--1,,1|(402,451)|
+///---\\\
+:L<%^E!@
+1:Current.vdf
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:Stock of dissident resources
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:2
+41:0
+42:0
+24:0
+25:20
+26:20
