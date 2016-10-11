@@ -1,0 +1,231 @@
+{UTF-8}
+Appeasement by Regime=
+	Fatigue of regime measures phi R * Level of Counteracting Measures by Regime HR
+	~	
+	~		|
+
+Change in Challenger Hostility=
+	Initial Discontent of Hostile Group d + Exacerbating effect of Repressive Action - Inhibitory Factor\
+		 + "Self-Reinforcing Effect" - Political Repression
+	~	
+	~		|
+
+Change in Regime Measures=
+	Retaliatory Efforts by Regime - Appeasement by Regime
+	~	
+	~		|
+
+Cost function exponent n=
+	1
+	~	
+	~		|
+
+cost parameter of collective action c=
+	1
+	~	
+	~		|
+
+Cost per Unit of Collective Action=
+	Level of Counteracting Measures by Regime HR ^ Cost function exponent n
+	~	
+	~		|
+
+Exacerbating effect of Repressive Action=
+	Exacerbating propensity on Challengers eC * Level of Counteracting Measures by Regime HR
+	~	
+	~		|
+
+Exacerbating propensity on Challengers eC=
+	1
+	~	
+	~		|
+
+Exacerbating propensity on Regime eR=
+	1
+	~	
+	~		|
+
+Fatigue of challenger hostility phi C=
+	1
+	~	
+	~		|
+
+Fatigue of regime measures phi R=
+	1
+	~	
+	~		|
+
+Inhibitory Factor=
+	Fatigue of challenger hostility phi C * Level of Hostility by Challengers HC
+	~	
+	~		|
+
+Initial Discontent of Hostile Group d=
+	1
+	~	
+	~		|
+
+Level of Counteracting Measures by Regime HR= INTEG (
+	Change in Regime Measures,
+		1)
+	~	 [0,?]
+	~		|
+
+Level of Hostility by Challengers HC= INTEG (
+	Change in Challenger Hostility,
+		1)
+	~	 [0,?]
+	~		|
+
+Political Repression=
+	cost parameter of collective action c * Cost per Unit of Collective Action * Level of Hostility by Challengers HC
+	~	
+	~		|
+
+Reinforcing Coefficient r=
+	1
+	~	
+	~		|
+
+Retaliatory Efforts by Regime=
+	Exacerbating propensity on Regime eR * Level of Hostility by Challengers HC
+	~	
+	~		|
+
+"Self-Reinforcing Effect"=
+	Level of Counteracting Measures by Regime HR * Level of Hostility by Challengers HC \
+		* Reinforcing Coefficient r
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|72,72,100,0
+10,1,Level of Hostility by Challengers HC,418,274,44,24,3,131,0,0,0,0,0,0
+10,2,Level of Counteracting Measures by Regime HR,767,210,46,27,3,131,0,0,0,0,0,0
+10,3,Retaliatory Efforts by Regime,573,328,47,14,8,3,0,0,0,0,0,0
+10,4,Appeasement by Regime,744,350,43,14,8,3,1,0,0,0,0,0
+12,5,48,585,211,10,8,0,3,0,0,-1,0,0,0
+1,6,8,2,4,0,0,22,0,0,0,-1--1--1,,1|(690,213)|
+1,7,8,5,100,0,0,22,0,0,0,-1--1--1,,1|(621,213)|
+11,8,48,654,213,6,8,34,3,0,0,1,0,0,0
+10,9,Change in Regime Measures,654,235,47,14,40,3,0,0,-1,0,0,0
+1,10,3,9,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(631,287)|
+1,11,4,9,1,1,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(678,300)|
+1,12,2,4,1,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(811,296)|
+10,13,Fatigue of regime measures phi R,744,410,45,14,8,3,1,0,0,0,0,0
+1,14,13,4,0,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(744,387)|
+10,15,Exacerbating propensity on Regime eR,572,398,56,21,8,3,0,0,0,0,0,0
+1,16,15,3,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(572,366)|
+1,17,1,3,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(476,301)|
+10,18,Initial Discontent of Hostile Group d,179,342,29,26,8,131,0,0,0,0,0,0
+12,19,48,220,272,10,8,0,3,0,0,-1,0,0,0
+1,20,22,1,4,0,0,22,0,0,0,-1--1--1,,1|(333,274)|
+1,21,22,19,100,0,0,22,0,0,0,-1--1--1,,1|(255,274)|
+11,22,48,287,274,6,8,34,3,0,0,1,0,0,0
+10,23,Change in Challenger Hostility,287,296,52,14,40,3,0,0,-1,0,0,0
+1,24,18,23,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(246,316)|
+10,25,Exacerbating effect of Repressive Action,213,131,56,14,8,3,0,0,0,0,0,0
+1,26,2,25,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(618,66)|
+10,27,Exacerbating propensity on Challengers eC,208,57,40,21,8,3,0,0,0,0,0,0
+1,28,27,25,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(209,90)|
+1,29,25,22,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(226,203)|
+10,30,Inhibitory Factor,364,399,43,8,8,3,1,0,0,0,0,0
+1,31,1,30,1,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(440,360)|
+10,32,Fatigue of challenger hostility phi C,414,450,54,14,8,3,1,0,0,0,0,0
+1,33,32,30,0,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(391,426)|
+1,34,30,23,1,1,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(295,362)|
+10,35,"Self-Reinforcing Effect",476,165,59,8,8,3,0,0,0,0,0,0
+10,36,Reinforcing Coefficient r,554,122,33,14,8,3,0,0,0,0,0,0
+1,37,1,35,1,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(478,223)|
+1,38,2,35,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(611,158)|
+1,39,35,22,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(313,154)|
+1,40,36,35,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(515,143)|
+10,41,Political Repression,383,541,50,8,8,3,0,0,0,0,0,0
+1,42,41,23,1,0,45,0,2,64,0,-1--1--1,|12||0-0-0,1|(231,430)|
+1,43,1,41,1,1,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(507,414)|
+10,44,cost parameter of collective action c,380,600,47,14,8,3,0,0,0,0,0,0
+1,45,44,41,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(380,574)|
+10,46,Cost per Unit of Collective Action,709,540,45,14,8,3,0,0,0,0,0,0
+1,47,46,41,0,0,0,0,0,64,0,-1--1--1,,1|(555,540)|
+1,48,2,46,1,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(849,328)|
+10,49,Cost function exponent n,711,602,35,14,8,3,0,0,0,0,0,0
+1,50,49,46,0,0,43,0,2,64,0,-1--1--1,|12||0-0-0,1|(710,577)|
+12,51,0,372,185,20,20,5,7,1,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+R1
+12,52,0,362,320,20,20,4,7,1,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B1
+12,53,0,294,433,20,20,4,7,1,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B2
+12,54,0,747,262,20,20,4,7,1,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B3
+12,55,0,658,443,20,20,4,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+B4
+12,56,0,660,473,29,8,8,7,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Repression
+12,57,0,532,221,20,20,5,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+R2
+12,58,0,530,250,27,8,8,7,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+Escalation
+12,59,0,450,68,20,20,5,135,0,3,-1,0,0,0,255-0-0,0-0-0,|12||255-0-0
+R3
+12,60,0,451,97,55,8,8,135,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Adding to Grievances
+12,61,0,373,214,48,8,8,7,1,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Proving Capability
+12,62,0,364,355,40,14,8,7,1,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Challenger Self Restraint
+12,63,0,745,293,55,8,8,7,1,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Regime Self Restraint
+12,64,0,295,465,49,8,8,7,1,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+Inviting Repression
+///---\\\
+:L<%^E!@
+1:Current.vdf
+9:Current
+22:$,Dollar,Dollars,$s
+22:Hour,Hours
+22:Month,Months
+22:Person,People,Persons
+22:Unit,Units
+22:Week,Weeks
+22:Year,Years
+22:Day,Days
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:2,
+34:0,
+4:Time
+5:Exacerbating propensity on Challengers eC
+24:0
+25:100
+26:100

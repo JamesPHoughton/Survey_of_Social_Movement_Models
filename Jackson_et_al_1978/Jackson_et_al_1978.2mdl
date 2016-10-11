@@ -74,6 +74,7 @@ R
 Escalation
 ///---\\\
 :L<%^E!@
+9:Current
 22:$,Dollar,Dollars,$s
 22:Hour,Hours
 22:Month,Months
@@ -82,6 +83,7 @@ Escalation
 22:Week,Weeks
 22:Year,Years
 22:Day,Days
+23:0
 15:0,0,0,0,0,0
 19:100,0
 27:2,
